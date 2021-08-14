@@ -1,0 +1,29 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+
+    <body>
+        <div class ="nav-container">
+        <table>
+            <tr>
+                <td><a href="{{ url_for('index') }}" class = "button">Home</a></td>
+            </tr>
+        </table>
+        </div>
+
+        <div>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <div>{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+
+            {# application content needs to be provided in the content block #}
+            {% block content %} {% endblock %}
+        </div>
+
+    </body>
+</html>

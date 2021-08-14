@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 1em;
+    font-family: Tahoma;
+    font-size : 18px;
+}
+
+.nav-container {
+	background:#f6f6f6;
+	font-family: Tahoma;
+	font-size: 12px;
+	height: 32px;
+	text-transform: uppercase;
+}
